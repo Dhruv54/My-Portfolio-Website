@@ -6,6 +6,7 @@ import {Design,Develope} from "./AllSvgs"
 import LogoComponent from "../subcomponents/LogoComponent"
 import PowerButton from "../subcomponents/PowerButton"
 import SocialIcons from "../subcomponents/SocialIcons"
+import ParticleComponent from "../subcomponents/ParticleComponent"
 
 const Box=styled.div`
 
@@ -27,7 +28,7 @@ width:30vw;
 height:60vh;
 z-index:3;
 line-height:1.5;
-
+cursor:pointer;
 font-family:'Ubantu Mono',monospace;
 display:flex;
 flex-direction:column;
@@ -45,15 +46,24 @@ align-items:center;
 font-size:calc(1em+1vw);
 
 ${Main}:hover &{
-  color:${props=>props.theme.body};
-  background-color:${props=>props.theme.text};
+  &>*{
+    fill:${props=>props.theme.body}
+  }
 }
 
+&>*:first-child{
+    margin-right:1rem;
+  }
 `
 const Description=styled.div`
 color:${props=>props.theme.text};
 font-size:calc(0.6em+1vw);
 padding:0.5rem 0;
+
+${Main}:hover &{
+    color:${props=>props.theme.body}
+}
+
 
 strong{
   margin-bottom:1rem;
@@ -73,6 +83,7 @@ const MySkillsPage = () => {
       <LogoComponent theme='light'/>
       <SocialIcons theme='light'/>
       <PowerButton/>
+      <ParticleComponent theme='light'/>
         <Main>
           <Title>
             <Design width={40} height={40}/> Coder
