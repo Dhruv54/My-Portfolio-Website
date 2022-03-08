@@ -6,6 +6,9 @@ import SocialIcons from "../subcomponents/SocialIcons"
 import PowerButton from "../subcomponents/PowerButton"
 import {Blogs} from '../data/BlogData'
 import BlogComponent from './BlogComponent'
+import AnchorComponent from '../subcomponents/AnchorComponent'
+import { useState } from 'react/cjs/react.development'
+import { useEffect } from 'react/cjs/react.development'
 
 const MainContainer=styled.div`
 background-image:url(${img});
@@ -18,7 +21,7 @@ width:100vw;
 
 const Container=styled.div`
 background-color: ${props=>`rgba(${props.theme.bodyRgba},0.5)`};
-width:80%;
+width:100%;
 height:auto;
 position:relative;
 padding-bottom:2rem;
@@ -30,25 +33,34 @@ display:flex;
 justify-content:center;
 align-items:center;
 padding-top:10rem;
-padding-left:20rem;
+padding-left:8rem;
+padding-right:8rem;
 `
 
 const Grid=styled.div`
 
 display:grid;
-${'' /* grid-template-columns:repeat(2,minmax(calc(10rem+15vw),1fr)); */}
-${'' /* grid-template-columns:auto; */}
-grid-template-columns: auto auto;
-gap:2rem 2rem;
+grid-template-columns:repeat(2,1fr);
+grid-gap:1rem;
 `
 
 const BlogPage = () => {
+
+
+  const [numbers, setNumbers] = useState(0);
+
+  useEffect(() => {
+    let num=(window.innerHeight-70)/30;
+    setNumbers(parseInt(num));
+  }, []);
+
   return (
     <MainContainer>
       <Container>
         <LogoComponent/>
         <PowerButton/>
         <SocialIcons/>
+        <AnchorComponent numbers={numbers}/>
 <Center>
 <Grid>
     {
