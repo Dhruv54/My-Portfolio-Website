@@ -6,6 +6,10 @@ import LogoComponent from '../subcomponents/LogoComponent'
 import PowerButton from '../subcomponents/PowerButton'
 import SocialIcons from '../subcomponents/SocialIcons'
 import { YinYang } from './AllSvgs'
+import { useState } from 'react/cjs/react.development'
+import Intro from './Intro'
+
+import { motion } from 'framer-motion'
 
 
 const MainContainer=styled.div`
@@ -44,10 +48,10 @@ z-index:1;
 `
 
 const WORK=styled(NavLink)`
-color: ${ props => props.theme.text};
+color: ${ props =>props.click?props.theme.body:props.theme.text};
 position: absolute;
 top: 50%;
-left: calc(1rem+2vw);
+left: 2.5rem;
 transform: translate(-50%,-50%) rotate(-90deg);
 text-decoration:none;
 z-index:1;
@@ -64,7 +68,7 @@ justify-content:space-evenly;
 `
 
 const ABOUT=styled(NavLink)`
-color: ${ props => props.theme.text};
+color: ${ props =>props.click?props.theme.body:props.theme.text};
 text-decoration:none;
 z-index:1;
 `
@@ -86,8 +90,8 @@ to{
 
 const Center=styled.button`
 position:absolute;
-top:50%;
-left:50%;
+top:${props=>props.click ? '85%' : '50%'};
+left:${props=>props.click ? '92%' : '50%'};
 transform: translate(-50%,-50%);
 border:none;
 outline:none;
@@ -97,61 +101,93 @@ display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:cemter;
+transition:all 1s ease;
 &>:first-child{
   animation:${rotate} infinite 1.5s linear;
 }
 &>:last-child{
+  display:${props=>props.click ? 'none' : 'inline-block'};
   padding-top:1rem;
   padding-left:4rem;
 }
 `
 
+const DarkDiv=styled.div`
+position:absolute;
+background-color:#000;
+top:0;
+bottom:0;
+right:50%;
+width:${props=>props.click?'50%':'0%'};
+height:${props=>props.click?'100%':'0%'};
+z-index:1;
+transition: height 0.5s ease,width 1s ease 0.5s
+
+`
+
 
 const Main = () => {
+
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
+
   return (
     <MainContainer>
+      <DarkDiv click={click}/>
       <Container>
       <PowerButton/>
-      <LogoComponent/>
-      <SocialIcons/>
-      <Center>
-        <YinYang width={200} height={150} fill='currentColor'/>
+      <LogoComponent theme={click ? "dark" : "light" }/>
+      <SocialIcons theme={click ? "dark" : "light" }/>
+      <Center click={click}>
+        <YinYang onClick={()=>handleClick()} width={click?120:200} height={click?120:200} fill='currentColor'/>
         <span>click here</span>
       </Center>
 
     <Contact target="_blank" to={{pathname:"mailto:190310patel@gmail.com"}}>
-      <h2>
+      <motion.h2
+      whileHover={{scale:1.1}}
+      whileTap{...{scale:0.9}}
+      >
         Say h!!!
-      </h2>
+      </motion.h2>
     </Contact>
 
     <BLOG to="/blog">
-      <h2>
+      <motion.h2
+      whileHover={{scale:1.1}}
+      whileTap{...{scale:0.9}}>
         Blog
-      </h2>
+      </motion.h2>
     </BLOG>
 
-    <WORK to="/work">
-      <h2>
+    <WORK to="/work" click={click}>
+      <motion.h2
+      whileHover={{scale:1.1}}
+      whileTap{...{scale:0.9}}>
         Work
-      </h2>
+      </motion.h2>
     </WORK>
 
     <BottomBar>
-      <ABOUT to="/about">
-        <h2>
-          About.
-        </h2>
+      <ABOUT to="/about" click={click}>
+        <motion.h2
+        whileHover={{scale:1.1}}
+        whileTap{...{scale:0.9}}>
+            About.
+        </motion.h2>
       </ABOUT>
 
       <SKILLS to="/skills">
-        <h2>
+        <motion.h2
+      whileHover={{scale:1.1}}
+      whileTap{...{scale:0.9}}>
           My Skills.
-        </h2>
+        </motion.h2>
       </SKILLS>
     </BottomBar> 
 
       </Container>
+      {click?<Intro click={click}/>:null}
     </MainContainer>
   )
 }

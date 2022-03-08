@@ -1,7 +1,7 @@
 import { Route } from "react-router-dom"
 import { Switch } from "react-router-dom/cjs/react-router-dom.min"
 import { ThemeProvider } from "styled-components"
-import  lightTheme  from "./components/Themes"
+import  {lightTheme}  from "./components/Themes"
 import GlobalStyle from "./globalStyle"
 import  Main  from "./components/Main"
 import  AboutPage  from "./components/AboutPage"
