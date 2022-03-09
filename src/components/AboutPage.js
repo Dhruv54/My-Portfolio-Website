@@ -76,12 +76,14 @@ const AboutPage = () => {
       </Spaceman>
 
       <Main>
-      I'm a front-end developer located in India. I love to create simple yet beautiful websites with great user experience.
-<br/>
-I'm interested in the whole frontend stack Like trying new things and building great projects. I'm an independent freelancer and blogger. I love to write blogs and read books.
-<br/>
-I believe everything is an Art when you put your consciousness in it. You can connect with me via social links.
-<br/>
+      Hii,its me Dhruv,
+      i m currently study in computer engineering in DDIT. currently i m learning Machine Learning,Tkinter,Rest APIs etc.
+      I'm a full stack developer. I love to create simple yet beautiful websites with great user experience.
+  <br/>
+  I'm interested in both frontend + backend.Trying new things and building great projects. I love to write code and playing cricket.
+  <br/>
+  I believe nothing is impossible.You can connect with me via social links.
+  <br/>
       </Main>
       <BigTitle text="ABOUT" top="10%" left="5%"/>
       </Box>
