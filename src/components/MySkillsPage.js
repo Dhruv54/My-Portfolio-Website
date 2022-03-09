@@ -7,7 +7,7 @@ import LogoComponent from "../subcomponents/LogoComponent"
 import PowerButton from "../subcomponents/PowerButton"
 import SocialIcons from "../subcomponents/SocialIcons"
 import ParticleComponent from "../subcomponents/ParticleComponent"
-
+import BigTitle from '../subcomponents/BigTitle'
 const Box=styled.div`
 
 background-color:${props=>props.theme.body};
@@ -17,7 +17,6 @@ position:relative;
 display:flex;
 justify-content:space-evenly;
 align-items:center;
-
 `
 const Main=styled.div`
 border:2px solid ${props=>props.theme.text};
@@ -43,7 +42,7 @@ const Title=styled.h2`
 display:flex;
 justify-content:center;
 align-items:center;
-font-size:calc(1em+1vw);
+font-size:calc(1em + 1vw);
 
 ${Main}:hover &{
   &>*{
@@ -57,7 +56,7 @@ ${Main}:hover &{
 `
 const Description=styled.div`
 color:${props=>props.theme.text};
-font-size:calc(0.6em+1vw);
+font-size:calc(0.6em + 1vw);
 padding:0.5rem 0;
 
 ${Main}:hover &{
@@ -131,6 +130,7 @@ const MySkillsPage = () => {
             </p>
           </Description>
         </Main>
+        <BigTitle text="SKILLS" top="80%" left="30%"/>
       </Box>
     </ThemeProvider>
 

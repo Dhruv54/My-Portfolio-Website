@@ -9,8 +9,10 @@ import BlogComponent from './BlogComponent'
 import AnchorComponent from '../subcomponents/AnchorComponent'
 import { useState } from 'react/cjs/react.development'
 import { useEffect } from 'react/cjs/react.development'
+import BigTitle from '../subcomponents/BigTitle'
+import { motion } from "framer-motion";
 
-const MainContainer=styled.div`
+const MainContainer=styled(motion.div)`
 background-image:url(${img});
 background-size:cover;
 background-repeat:no-repeat;
@@ -44,6 +46,18 @@ grid-template-columns:repeat(2,1fr);
 grid-gap:1rem;
 `
 
+const container = {
+
+  hidden: { opacity: 0},
+  show: {
+      opacity:1,
+      transition:{
+        staggerChildren:0.5,
+        duration:0.5,
+    }
+  }
+}
+
 const BlogPage = () => {
 
 
@@ -55,7 +69,11 @@ const BlogPage = () => {
   }, []);
 
   return (
-    <MainContainer>
+    <MainContainer variants={container} initial='hidden' animate='show'
+    exit={{
+      opacity:0,transition:{duration:0.5}
+    }}
+    >
       <Container>
         <LogoComponent/>
         <PowerButton/>
@@ -70,6 +88,7 @@ const BlogPage = () => {
     }
 </Grid>
 </Center>
+<BigTitle text="BLOG" top="5rem" left="5rem"/>
       </Container>
     </MainContainer>
   )

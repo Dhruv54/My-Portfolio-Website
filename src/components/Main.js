@@ -100,7 +100,7 @@ cursor:pointer;
 display:flex;
 flex-direction:column;
 justify-content:center;
-align-items:cemter;
+align-items:center;
 transition:all 1s ease;
 &>:first-child{
   animation:${rotate} infinite 1.5s linear;
@@ -145,6 +145,22 @@ const Main = () => {
 
     <Contact target="_blank" to={{pathname:"mailto:190310patel@gmail.com"}}>
       <motion.h2
+      initial={{
+        y:-200,
+        transition: {
+            type:'spring',
+            duration: 1.5,
+            delay:1
+        }
+      }}
+      animate={{
+        y:0,
+        transition: {
+            type:'spring',
+            duration: 1.5,
+            delay:1
+        }
+      }}
       whileHover={{scale:1.1}}
       whileTap{...{scale:0.9}}
       >
@@ -154,6 +170,22 @@ const Main = () => {
 
     <BLOG to="/blog">
       <motion.h2
+      initial={{
+        y:-200,
+        transition: {
+            type:'spring',
+            duration: 1.5,
+            delay:1
+        }
+      }}
+      animate={{
+        y:0,
+        transition: {
+            type:'spring',
+            duration: 1.5,
+            delay:1
+        }
+      }}
       whileHover={{scale:1.1}}
       whileTap{...{scale:0.9}}>
         Blog
@@ -162,6 +194,22 @@ const Main = () => {
 
     <WORK to="/work" click={click}>
       <motion.h2
+      initial={{
+        y:-200,
+        transition: {
+            type:'spring',
+            duration: 1.5,
+            delay:1
+        }
+      }}
+      animate={{
+        y:0,
+        transition: {
+            type:'spring',
+            duration: 1.5,
+            delay:1
+        }
+      }}
       whileHover={{scale:1.1}}
       whileTap{...{scale:0.9}}>
         Work
@@ -171,6 +219,22 @@ const Main = () => {
     <BottomBar>
       <ABOUT to="/about" click={click}>
         <motion.h2
+        initial={{
+        y:200,
+        transition: {
+            type:'spring',
+            duration: 1.5,
+            delay:1
+        }
+      }}
+      animate={{
+        y:0,
+        transition: {
+            type:'spring',
+            duration: 1.5,
+            delay:1
+        }
+      }}
         whileHover={{scale:1.1}}
         whileTap{...{scale:0.9}}>
             About.
@@ -179,6 +243,22 @@ const Main = () => {
 
       <SKILLS to="/skills">
         <motion.h2
+        initial={{
+        y:200,
+        transition: {
+            type:'spring',
+            duration: 1.5,
+            delay:1
+        }
+      }}
+      animate={{
+        y:0,
+        transition: {
+            type:'spring',
+            duration: 1.5,
+            delay:1
+        }
+      }}
       whileHover={{scale:1.1}}
       whileTap{...{scale:0.9}}>
           My Skills.

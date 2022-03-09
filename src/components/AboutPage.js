@@ -8,6 +8,7 @@ import SocialIcons from "../subcomponents/SocialIcons"
 import ParticleComponent from "../subcomponents/ParticleComponent"
 import astronaut from '../assets/Images/spaceman.png'
 import { keyframes } from 'styled-components'
+import BigTitle from '../subcomponents/BigTitle'
 
 const Box=styled.div`
 
@@ -48,11 +49,11 @@ line-height:1.5;
 display:flex;
 justify-content:center;
 align-items:center;
-font-size:calc(0.6rem+1vw);
+font-size:calc(0.6rem + 1vw);
 backdrop-filter:blur(4px);
 
 position:absolute;
-${'' /* left:calc(5rem+5vw); */}
+left:calc(5rem + 5vw);
 left:5rem;
 top:10rem;
 
@@ -82,6 +83,7 @@ I'm interested in the whole frontend stack Like trying new things and building g
 I believe everything is an Art when you put your consciousness in it. You can connect with me via social links.
 <br/>
       </Main>
+      <BigTitle text="ABOUT" top="10%" left="5%"/>
       </Box>
     </ThemeProvider>
 
