@@ -28,8 +28,8 @@ background-image:${props=>`url(${props.img})`};
 width:100%;
 height:60%;
 background-size:cover;
-border:1px slod transparent;
-background-position:center;
+border:1px solid transparent;
+background-position:center center;
 
 ${Box}:hover{
     border:1px solid ${props=>props.theme.body};

@@ -9,22 +9,22 @@ position:absolute;
 left:50%;
 top:50%;
 transform:translate(-50%,-50%);
-width:55vw;
+width:65vw;
 display:flex;
-height:35vh;
+height:55vh;
 
 
-${'' /* background:linear-gradient(
+background:linear-gradient(
     to right,
     ${props=>props.theme.body} 50%,
     ${props=>props.theme.text} 50%) bottom,
     linear-gradient(
     to right,
     ${props=>props.theme.body} 50%,
-    ${props=>props.theme.text} 50%) top; */}
-background-repeat:no-repeat;
-background-size: 100% 10px;
+    ${props=>props.theme.text} 50%) top;
 
+    background-repeat:no-repeat;
+    background-size: 100% 2px;
     border-left:2px solid ${props=>props.theme.body};
     border-right:2px solid ${props=>props.theme.text};
     
@@ -47,7 +47,7 @@ display:flex;
 `
 const Text=styled.div`
 
-font-size:200%;
+font-size:calc(1em + 1.5vw);
 color:${props=>props.theme.body};
 padding:2rem;
 cursor:pointer;

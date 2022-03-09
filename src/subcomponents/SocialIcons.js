@@ -103,7 +103,7 @@ const SocialIcons = (props) => {
                     height:'8rem'
                 }}
                 transition={{
-                    type:'spring',duration:1,delay:1,delay:0.8
+                    type:'spring',duration:1,delay:1.8
                 }}
             />
         </Icons>

@@ -13,6 +13,7 @@ import { YinYang } from './AllSvgs'
 import BigTitle from '../subcomponents/BigTitle'
 import { motion } from "framer-motion";
 
+
 const Box=styled.div`
 background-color:${props=>props.theme.body};
 height:400vh;
@@ -53,23 +54,20 @@ const container = {
 }
 
 const WorkPage = () => {
-
   const ref=useRef(null);
   const yinyang=useRef(null);
 
   useEffect(() => {
-
     let element= ref.current;
 
     const rotate = () => {
       element.style.transform = `translateX(${-window.pageYOffset}px)`
-
-      yinyang.current.style.transform=`rotate(` +  -window.pageYOffset + `deg)`
+      // yinyang.current.style.transform=`rotate(` +  -window.pageYOffset + `deg)`
     }
 
     window.addEventListener('scroll',rotate)
 
-    return ()=> window.removeEventListener('scroll',rotate)
+    return ()=> window.removeEventListener('scroll',rotate);
 
   }, []);
 
