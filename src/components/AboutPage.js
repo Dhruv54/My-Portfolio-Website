@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import { ThemeProvider } from 'styled-components'
-import {DarkTheme} from './Themes'
+import {BlueTheme} from './Themes'
 import LogoComponent from "../subcomponents/LogoComponent"
 import PowerButton from "../subcomponents/PowerButton"
 import SocialIcons from "../subcomponents/SocialIcons"
 import ParticleComponent from "../subcomponents/ParticleComponent"
-import astronaut from '../assets/Images/hey.png'
+import astronaut from '../assets/Images/spaceman.png'
 import { keyframes } from 'styled-components'
 import BigTitle from '../subcomponents/BigTitle'
 
@@ -64,7 +64,7 @@ font-style:italic;
 const AboutPage = () => {
   return (
 
-    <ThemeProvider theme={DarkTheme}>
+    <ThemeProvider theme={BlueTheme}>
       <Box>
       <LogoComponent theme='dark'/>
       <SocialIcons theme='dark'/>

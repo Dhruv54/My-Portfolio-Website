@@ -50,21 +50,20 @@ z-index:1;
 const WORK=styled(NavLink)`
 color: ${ props =>props.click?props.theme.body:props.theme.text};
 position: absolute;
-top: 50%;
-left: calc(1rem + 2vw);
-transform: translate(-50%,-50%) rotate(-90deg);
+left: calc(15rem + 2vw);
+${'' /* transform: translate(-50%,-50%) rotate(-90deg); */}
 text-decoration:none;
 z-index:1;
 `
 
 const BottomBar=styled.div`
 position: absolute;
-bottom: 1rem;
-left:0;
+${'' /* bottom: 1rem; */}
 right: 0;
-width:100%;
+${'' /* width:100%; */}
 display:flex;
 justify-content:space-evenly;
+left: calc(10rem + 2vw);
 `
 
 const ABOUT=styled(NavLink)`
@@ -163,7 +162,7 @@ const Main = () => {
       whileHover={{scale:1.1}}
       whileTap{...{scale:0.9}}
       >
-        Say h!!!
+        Contact Me
       </motion.h2>
     </Contact>
 
@@ -236,7 +235,7 @@ const Main = () => {
       }}
         whileHover={{scale:1.1}}
         whileTap{...{scale:0.9}}>
-            About.
+            About
         </motion.h2>
       </ABOUT>
 
@@ -260,7 +259,7 @@ const Main = () => {
       }}
       whileHover={{scale:1.1}}
       whileTap{...{scale:0.9}}>
-          My Skills.
+          My Skills
         </motion.h2>
       </SKILLS>
     </BottomBar> 

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { ThemeProvider } from 'styled-components'
-import {lightTheme} from './Themes'
+import {LightBlueTheme} from './Themes'
 import {Design,Develope} from "./AllSvgs"
 import LogoComponent from "../subcomponents/LogoComponent"
 import PowerButton from "../subcomponents/PowerButton"
@@ -13,25 +13,31 @@ const Box=styled.div`
 background-color:${props=>props.theme.body};
 width:100vw;
 height:100vh;
-position:relative;
+${'' /* position:relative; */}
 display:flex;
-justify-content:space-evenly;
+flex-direction:column;
+flex-wrap:wrap;
+${'' /* justify-content:space-evenly; */}
 align-items:center;
+padding-top:5rem;
+padding-left:2rem;
+padding-right:2rem;
+
+@media (max-width: 800px) {
+    flex-direction: row;
+  }
 `
 const Main=styled.div`
 border:2px solid ${props=>props.theme.text};
 color:${props=>props.theme.text};
 background-color:${props=>props.theme.body};
-padding:2rem;
-width:30vw;
-height:60vh;
+padding:1rem;
+width:20vw;
+height:38vh;
 z-index:3;
 line-height:1.5;
 cursor:pointer;
 font-family:'Ubantu Mono',monospace;
-display:flex;
-flex-direction:column;
-justify-content:space-between;
 
 &:hover{
   color:${props=>props.theme.body};
@@ -63,12 +69,6 @@ ${Main}:hover &{
     color:${props=>props.theme.body}
 }
 
-
-strong{
-  margin-bottom:1rem;
-  text-transform:uppercase;
-
-}
 ul,p{
   margin-left:2rem;
 }
@@ -77,7 +77,7 @@ ul,p{
 const MySkillsPage = () => {
   return (
 
-    <ThemeProvider theme={lightTheme}>
+    <ThemeProvider theme={LightBlueTheme}>
       <Box>
       <LogoComponent theme='light'/>
       <SocialIcons theme='light'/>
@@ -128,9 +128,6 @@ const MySkillsPage = () => {
               <li>
                 4. Bootstrap
               </li>
-              <li>
-                5.
-              </li>
             </ul>
           </Description>
         </Main>
@@ -172,6 +169,21 @@ const MySkillsPage = () => {
               </li>
               <li>
                 4. MySQL
+              </li>
+            </ul>
+          </Description>
+        </Main>
+        <Main>
+          <Title>
+          <Develope width={40} height={40}/>EXTRA
+          </Title>
+          <Description>
+            <ul>
+              <li>
+                1. Git
+              </li>
+              <li>
+                2. GitHub
               </li>
             </ul>
           </Description>
