@@ -1,61 +1,58 @@
 export const Work = [
     {
         id:1,
-        name:"Agency Landing Page",
-        description:"It is build on top of the React JS, with styledComponents and GSAP for smooth scrolling animations.",
-        tags:["react","gsap","styledComponents"],
+        name:"My-Portfolio-Website",
+        description:"It is build with React JS, with styledComponents and framer-motion for smooth scrolling animations.",
+        tags:["react","framer-motion","styledComponents"],
         
-        demo:"https://agency-website-eta.vercel.app/",
-        github:"https://github.com/codebucks27/Agency-website"
+        demo:"https://github.com/Dhruv54/My-Portfolio-Website",
+        github:"https://github.com/Dhruv54/My-Portfolio-Website"
     },
     {
         id:2,
-        name:"Job listing website",
-        description:"A Job listing website build in ReactJS. With searching and filtering functionalities.",
-        tags:["react","sass"],
+        name:"Flash-Card Website(MERN stack)",
+        description:"A website for create flashcards build in React JS. With CRUD functionalities.",
+        tags:["react","nodejs","Bootstrap","express","mongodb"],
         
-        demo:"http://react-job-listing-website.codebucks27.vercel.app/",
-        github:"https://github.com/codebucks27/react-job-listing-website"
+        demo:"https://github.com/Dhruv54/Advanced-Technology-ReactJS",
+        github:"https://github.com/Dhruv54/Advanced-Technology-ReactJS"
         
     },
     {
         id:3,
-        name:"Dev.to Clone",
-        description:"A clone of Dev.to build using ReactJS. With realtime fetching of articles from dev.to using API.",
-        tags:["react","api","sass"],
+        name:"File-Compression-Decompression",
+        description:"A Basic GUI created using python Tkinter for compressing the file. Mainly for Image, Video and Text files.",
+        tags:["Python","Tkinter","Windows Application"],
         
-        demo:"http://devto-clone-codebucks27.vercel.app/",
-        github:"https://github.com/codebucks27/devto-clone"
+        demo:"https://github.com/Dhruv54/File-Compression",
+        github:"https://github.com/Dhruv54/File-Compression"
     },
     {
         id:4,
-        name:"Sidebar Menu",
-        description:"A cool looking sidebar menu build using ReactJS and styledComponents.It has really smooth animations.",
-        tags:["react","styledComponents","react-router"],
+        name:"Gym Management Website",
+        description:"A cool looking gym website for managing the Members, Equipments etc.",
+        tags:[".NET Framework",".NET Core MVC","Visual-Studio","Bootstrap"],
         
-        demo:"https://react-sidebar.vercel.app/",
-        github:"https://github.com/codebucks27/react-sidebar"
-       
+        demo:"https://github.com/Dhruv54/.net-core-mvc_.net-framework",
+        github:"https://github.com/Dhruv54/.net-core-mvc_.net-framework"
     },{
         id:5,
-        name:"Todo App(React + Redux)",
-        description:"A todo app build using Redux-toolkit and framer-motion for smooth animations.",
-        tags:["react","redux","framer-motion"],
+        name:"Ecommerce Website",
+        description:"A Ecommerce Website for selling and buying vehicles.",
+        tags:["Python","Django","mySQL","Bootstrap"],
         
-        demo:"http://react-redux-todo-app-git-main-codebucks27.vercel.app/",
-        github:"https://github.com/codebucks27/React-Redux-Todo-App"
+        demo:"https://github.com/Dhruv54/ExchangeOnlinesystem-Python-Django",
+        github:"https://github.com/Dhruv54/ExchangeOnlinesystem-Python-Django"
         
     },
     {
         id:6,
-        name:"Responsive Navigation Menu",
-        description:"A reponsive navbar menu component in ReactJS with react-router functionalities. Built from scratch.",
-        tags:["react","react-router","css"],
+        name:"Todo List(AngularCLI)",
+        description:"A website for creating todo list.Build with Angular.",
+        tags:["Angularcli","HTML","CSS","Javascript"],
         
-        demo:"http://react-responsive-navbar-codebucks27.vercel.app/",
-        github:"https://github.com/codebucks27/React-responsive-navbar"
+        demo:"https://github.com/Dhruv54/AngularCLI",
+        github:"https://github.com/Dhruv54/AngularCLI"
         
     },
-    
-  
 ] 

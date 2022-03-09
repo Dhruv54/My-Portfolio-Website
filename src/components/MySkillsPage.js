@@ -85,55 +85,100 @@ const MySkillsPage = () => {
       <ParticleComponent theme='light'/>
         <Main>
           <Title>
-            <Design width={40} height={40}/> Coder
+          <Develope width={40} height={40}/>LANGUAGES
           </Title>
           <Description>
-          I love to create design which speaks, Keep it clean, minimal and simple.
-          </Description>
-          <Description>
-            <strong>I like to Design</strong>
             <ul>
               <li>
-                Web Design
+                1. C
               </li>
               <li>
-                Apps
+                2. C++
               </li>
-            </ul>
-          </Description>
-          <Description>
-            <strong>Tools</strong>
-            <ul>
               <li>
-                Figma
+                3. C#
+              </li>
+              <li>
+                4. Python
+              </li>
+              <li>
+                5. PHP
+              </li>
+              <li>
+                6. JAVA
               </li>
             </ul>
           </Description>
         </Main>
         <Main>
           <Title>
-            <Develope width={40} height={40}/> Developer
+            <Design width={40} height={40}/>FRONTEND
           </Title>
           <Description>
-          I value business or brand for which i'm creating, thus i enjoy bringing new ideas to life.
+            <ul>
+              <li>
+                1. HTML
+              </li>
+              <li>
+                2. CSS
+              </li>
+              <li>
+                3. JavaScript
+              </li>
+              <li>
+                4. Bootstrap
+              </li>
+              <li>
+                5.
+              </li>
+            </ul>
           </Description>
+        </Main>
+        <Main>
+          <Title>
+          <Develope width={40} height={40}/>FRAMEWORK
+          </Title>
           <Description>
-            <strong>Skills</strong>
-            <p>
-            Html, Css, Js, React, Redux, Sass, Bootstrap, Tailwind, Firebase etc.
-            </p>
+            <ul>
+              <li>
+                1. React(MERN stack)
+              </li>
+              <li>
+                2. Django
+              </li>
+              <li>
+                3. Angular
+              </li>
+              <li>
+                4. .NET framework & .NET Core
+              </li>
+            </ul>
           </Description>
+        </Main>
+        <Main>
+          <Title>
+          <Develope width={40} height={40}/>BACKEND
+          </Title>
           <Description>
-            <strong>Tools</strong>
-            <p>
-            VScode, Github, Codepen etc.
-            </p>
+            <ul>
+              <li>
+                1. MongoDB
+              </li>
+              <li>
+                2. Express
+              </li>
+              <li>
+                3. Node.js
+              </li>
+              <li>
+                4. MySQL
+              </li>
+            </ul>
           </Description>
         </Main>
         <BigTitle text="SKILLS" top="80%" left="30%"/>
       </Box>
     </ThemeProvider>
-
   )
 }
 

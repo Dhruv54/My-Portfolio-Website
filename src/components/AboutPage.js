@@ -6,7 +6,7 @@ import LogoComponent from "../subcomponents/LogoComponent"
 import PowerButton from "../subcomponents/PowerButton"
 import SocialIcons from "../subcomponents/SocialIcons"
 import ParticleComponent from "../subcomponents/ParticleComponent"
-import astronaut from '../assets/Images/spaceman.png'
+import astronaut from '../assets/Images/hey.png'
 import { keyframes } from 'styled-components'
 import BigTitle from '../subcomponents/BigTitle'
 
@@ -78,7 +78,7 @@ const AboutPage = () => {
       <Main>
       Hii,its me Dhruv,
       i m currently study in computer engineering in DDIT. currently i m learning Machine Learning,Tkinter,Rest APIs etc.
-      I'm a full stack developer. I love to create simple yet beautiful websites with great user experience.
+      I'm a full stack developer. I love to create simple beautiful websites with great user experience.
   <br/>
   I'm interested in both frontend + backend.Trying new things and building great projects. I love to write code and playing cricket.
   <br/>
