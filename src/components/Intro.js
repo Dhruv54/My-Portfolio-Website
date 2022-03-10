@@ -7,25 +7,24 @@ const Box=styled(motion.div)`
 
 position:absolute;
 left:50%;
-top:50%;
+top:55%;
 transform:translate(-50%,-50%);
-width:65vw;
+width:70vw;
 display:flex;
-height:55vh;
 
 
 background:linear-gradient(
     to right,
-    ${props=>props.theme.body} 50%,
+    ${props=>props.theme.text} 50%,
     ${props=>props.theme.text} 50%) bottom,
     linear-gradient(
     to right,
-    ${props=>props.theme.body} 50%,
+    ${props=>props.theme.text} 50%,
     ${props=>props.theme.text} 50%) top;
 
     background-repeat:no-repeat;
     background-size: 100% 2px;
-    border-left:2px solid ${props=>props.theme.body};
+    border-left:2px solid ${props=>props.theme.text};
     border-right:2px solid ${props=>props.theme.text};
     
     z-index:1;
@@ -41,14 +40,14 @@ display:flex;
     bottom:0;
     left:50%;
     transform:translate(-50%,0%);
-    width:100%;
+    width:90%;
     height:auto;
 }
 `
-const Text=styled.div`
+const Text=styled(motion.div)`
 
 font-size:calc(1em + 1.5vw);
-color:${props=>props.theme.body};
+color:${props=>props.theme.text};
 padding:2rem;
 cursor:pointer;
 
@@ -57,9 +56,9 @@ flex-direction:column;
 justify-content:space-evenly;
 
 &>*:last-child{
-    color:${props=>`rgba(${props.theme.bodyRgba},0.6)`};
-    font-size:120%;
-    font-weight:300;
+    color:${props=>`rgba(${props.theme.textRgba},0.6)`};
+    font-size:80%;
+    font-weight:500;
 }
 
 `
@@ -69,16 +68,20 @@ const Intro = () => {
     return (
         <Box
         initial={{height:0}}
-        animate={{height:'35vh'}}
+        animate={{height:'45vh'}}
         transition={{type:'spring',duration:2,delay:1}}
         >
             <SubBox>
-                <Text>
+                <Text
+                initial={{opacity:0}}
+                animate={{opacity:1}}
+                transition={{duration:1,delay:2}}>
                     <h1>Hi,</h1>
                     <h3>I'm Dhruv.</h3>
-                    <h6>I m Web Developer!!!</h6>
+                    <h5>I'm Web Developer</h5>
+                    <p>FAST LEARNER</p>
                 </Text>
-            </SubBox>I
+            </SubBox>
             <SubBox>
                 <motion.div
                 initial={{opacity:0}}

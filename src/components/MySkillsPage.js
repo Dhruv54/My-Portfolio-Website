@@ -1,43 +1,38 @@
 import React from 'react'
 import styled from 'styled-components'
 import { ThemeProvider } from 'styled-components'
-import {LightBlueTheme} from './Themes'
+import {NewTheme} from './Themes'
 import {Design,Develope} from "./AllSvgs"
 import LogoComponent from "../subcomponents/LogoComponent"
 import PowerButton from "../subcomponents/PowerButton"
 import SocialIcons from "../subcomponents/SocialIcons"
 import ParticleComponent from "../subcomponents/ParticleComponent"
 import BigTitle from '../subcomponents/BigTitle'
+
+
+const Container=styled.div`
+padding-top:100px;
+padding-left:70px;
+padding-right:10px;
+`
+
 const Box=styled.div`
-
-background-color:${props=>props.theme.body};
-width:100vw;
-height:100vh;
-${'' /* position:relative; */}
 display:flex;
-flex-direction:column;
-flex-wrap:wrap;
-${'' /* justify-content:space-evenly; */}
-align-items:center;
-padding-top:5rem;
-padding-left:2rem;
-padding-right:2rem;
-
-@media (max-width: 800px) {
-    flex-direction: row;
-  }
+flex-flow:row wrap;
+position:relative;
 `
 const Main=styled.div`
-border:2px solid ${props=>props.theme.text};
-color:${props=>props.theme.text};
+border:2px solid #00203FFF;
+color:#303030;
 background-color:${props=>props.theme.body};
 padding:1rem;
-width:20vw;
-height:38vh;
+flex:1;
+flex-basis: 20%;
 z-index:3;
 line-height:1.5;
 cursor:pointer;
 font-family:'Ubantu Mono',monospace;
+margin: 10px;
 
 &:hover{
   color:${props=>props.theme.body};
@@ -61,14 +56,12 @@ ${Main}:hover &{
   }
 `
 const Description=styled.div`
-color:${props=>props.theme.text};
 font-size:calc(0.6em + 1vw);
 padding:0.5rem 0;
 
 ${Main}:hover &{
     color:${props=>props.theme.body}
 }
-
 ul,p{
   margin-left:2rem;
 }
@@ -77,15 +70,16 @@ ul,p{
 const MySkillsPage = () => {
   return (
 
-    <ThemeProvider theme={LightBlueTheme}>
-      <Box>
+    <ThemeProvider theme={NewTheme}>
       <LogoComponent theme='light'/>
       <SocialIcons theme='light'/>
       <PowerButton/>
       <ParticleComponent theme='light'/>
+      <Container>
+      <Box>
         <Main>
           <Title>
-          <Develope width={40} height={40}/>LANGUAGES
+          <Develope width={35} height={35}/>LANGUAGES
           </Title>
           <Description>
             <ul>
@@ -112,7 +106,7 @@ const MySkillsPage = () => {
         </Main>
         <Main>
           <Title>
-            <Design width={40} height={40}/>FRONTEND
+            <Design width={35} height={35}/>FRONTEND
           </Title>
           <Description>
             <ul>
@@ -133,7 +127,7 @@ const MySkillsPage = () => {
         </Main>
         <Main>
           <Title>
-          <Develope width={40} height={40}/>FRAMEWORK
+          <Develope width={35} height={35}/>FRAMEWORK
           </Title>
           <Description>
             <ul>
@@ -154,7 +148,7 @@ const MySkillsPage = () => {
         </Main>
         <Main>
           <Title>
-          <Develope width={40} height={40}/>BACKEND
+          <Develope width={35} height={35}/>BACKEND
           </Title>
           <Description>
             <ul>
@@ -173,9 +167,10 @@ const MySkillsPage = () => {
             </ul>
           </Description>
         </Main>
+        
         <Main>
           <Title>
-          <Develope width={40} height={40}/>EXTRA
+          <Develope width={35} height={35}/>EXTRA
           </Title>
           <Description>
             <ul>
@@ -188,8 +183,9 @@ const MySkillsPage = () => {
             </ul>
           </Description>
         </Main>
-        <BigTitle text="SKILLS" top="80%" left="30%"/>
       </Box>
+      </Container>
+      <BigTitle text="SKILLS" top="80%" left="30%"/>
     </ThemeProvider>
   )
 }

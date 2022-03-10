@@ -32,3 +32,11 @@ export const LightBlueTheme={
     bodyRgba : "252, 246, 244",
     textRgba:"0,0,0",
 }
+
+export const NewTheme={
+    body:"#CEDEF0",
+    text:"#6B9BD1",
+    fontFamily:"'Source Sans Pro', sans-serif",
+    bodyRgba : "#9D9AD9",
+    textRgba:"0,0,0",
+}
