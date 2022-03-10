@@ -1,9 +1,9 @@
 import React from 'react'
-import { useRef } from 'react/cjs/react.development'
+import { useRef } from 'react'
 import styled from 'styled-components'
 import { Link } from '../components/AllSvgs'
 import { Anchor} from '../components/AllSvgs'
-import { useEffect } from 'react/cjs/react.development'
+import { useEffect } from 'react'
 
 const Container=styled.div`
 position:relative;
@@ -67,7 +67,7 @@ const AnchorComponent = (props) => {
             </PreDisplay> 
             <Slider ref={ref}>
                 {
-                    [...Array(props.numbers)].map((x,id)=>{
+                    [Array(props.numbers)].map((x,id)=>{
                         return <Link className="chain" key={id} width={25} height={25} fill='currentColor'/>
                     })
                 }

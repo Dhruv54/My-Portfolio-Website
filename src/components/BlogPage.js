@@ -7,8 +7,8 @@ import PowerButton from "../subcomponents/PowerButton"
 import {Blogs} from '../data/BlogData'
 import BlogComponent from './BlogComponent'
 import AnchorComponent from '../subcomponents/AnchorComponent'
-import { useState } from 'react/cjs/react.development'
-import { useEffect } from 'react/cjs/react.development'
+import { useState } from 'react'
+import { useEffect } from 'react'
 import BigTitle from '../subcomponents/BigTitle'
 import { motion } from "framer-motion";
 

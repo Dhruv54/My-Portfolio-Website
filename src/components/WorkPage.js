@@ -7,8 +7,8 @@ import PowerButton from "../subcomponents/PowerButton"
 import SocialIcons from "../subcomponents/SocialIcons"
 import Card from "../subcomponents/Card"
 import {Work} from '../data/WorkData'
-import { useRef } from 'react/cjs/react.development'
-import { useEffect } from 'react/cjs/react.development'
+import { useRef } from 'react'
+import { useEffect } from 'react'
 import { YinYang } from './AllSvgs'
 import BigTitle from '../subcomponents/BigTitle'
 import { motion } from "framer-motion";

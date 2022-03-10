@@ -6,7 +6,7 @@ import LogoComponent from '../subcomponents/LogoComponent'
 import PowerButton from '../subcomponents/PowerButton'
 import SocialIcons from '../subcomponents/SocialIcons'
 // import { YinYang } from './AllSvgs'
-import { useState } from 'react/cjs/react.development'
+import { useState } from 'react'
 import Intro from './Intro'
 import ParticleComponent from "../subcomponents/ParticleComponent"
 
@@ -176,9 +176,7 @@ const Main = () => {
             delay:1.1
         }
       }}
-      whileHover={{scale:1.1}}
-      whileTap{...{scale:0.9}}
-      >
+      whileHover={{scale:1.1}}>
         CONTACT ME
       </motion.h2>
     </Contact>
@@ -225,8 +223,7 @@ const Main = () => {
             delay:1
         }
       }}
-      whileHover={{scale:1.1}}
-      whileTap{...{scale:0.9}}>
+      whileHover={{scale:1.1}}>
         PROJECTS
       </motion.h2>
     </WORK>
@@ -250,8 +247,7 @@ const Main = () => {
             delay:1.2
         }
       }}
-        whileHover={{scale:1.1}}
-        whileTap{...{scale:0.9}}>
+        whileHover={{scale:1.1}}>
             ABOUT
         </motion.h2>
       </ABOUT>
@@ -274,8 +270,7 @@ const Main = () => {
             delay:1.1
         }
       }}
-      whileHover={{scale:1.1}}
-      whileTap{...{scale:0.9}}>
+      whileHover={{scale:1.1}}>
           SKILLS
         </motion.h2>
       </SKILLS>

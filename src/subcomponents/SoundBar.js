@@ -1,8 +1,8 @@
 import React from 'react'
-import { useRef } from 'react/cjs/react.development'
+import { useRef } from 'react'
 import styled from 'styled-components'
 import music from '../assets/audio/u-said-it-v13-1167.mp3'
-import { useState } from 'react/cjs/react.development'
+import { useState } from 'react'
 import { keyframes } from 'styled-components'
 
 const Box=styled.div`
